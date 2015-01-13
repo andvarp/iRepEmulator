@@ -53,9 +53,12 @@
                 
                 // Save url encoded folder for look ups later, get HTML, thumbnail, and image file paths
                 NSURL *folderUrl = [url URLByAppendingPathComponent:matchParse];
-                NSURL *htmlUrl = [folderUrl URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.html", matchParse]];
-                NSURL *thumbnailUrl = [folderUrl URLByAppendingPathComponent:[NSString stringWithFormat:@"%@-thumb.png", matchParse]];
-                NSURL *imageUrl = [folderUrl URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.png", matchParse]];
+                NSURL *htmlUrl = [folderUrl URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.html", @"index"]];
+                NSURL *thumbnailUrl = [folderUrl URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.png", @"thumb"]];
+                NSURL *imageUrl = [folderUrl URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.png", @"thumb"]];
+                //NSURL *htmlUrl = [folderUrl URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.html", matchParse]];
+                //NSURL *thumbnailUrl = [folderUrl URLByAppendingPathComponent:[NSString stringWithFormat:@"%@-thumb.png", matchParse]];
+                //NSURL *imageUrl = [folderUrl URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.png", matchParse]];
                 
                 // URL decode the directory so it can be used as the name
                 NSString *matchName = [matchParse stringByDecodingURLFormat];
